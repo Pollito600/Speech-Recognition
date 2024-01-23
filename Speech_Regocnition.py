@@ -99,7 +99,7 @@ def load_data(folder_path):
     return np.array(features), np.array(labels)
 
 # Define the path to the training folder
-train_folder = "/Users/joshuacatalan/Desktop/CSE 3313/DFT_Project/Project A Data"
+train_folder = "/Users/DFT_Project/Project A Data"
 # Load training data and split into training and validation sets
 X_train, y_train = load_data(train_folder)
 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
@@ -129,7 +129,7 @@ def predict_digits(test_files, classifier):
     return predictions
 
 # Define the path to the test folder
-test_folder = "/Users/joshuacatalan/Desktop/CSE 3313/DFT_Project/Test Data"
+test_folder = "/Users/DFT_Project/Test Data"
 # Create a list of test file paths
 test_files = [os.path.join(test_folder, file) for file in os.listdir(test_folder) if file.endswith(".wav")]
 # Make predictions for each test file
